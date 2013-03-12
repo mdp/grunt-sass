@@ -11,6 +11,15 @@ exports.sass = {
 
 		test.done();
 	},
+	compileRelative: function (test) {
+		test.expect(1);
+
+		var actual = grunt.file.read('test/tmp/test_relative.css');
+		var expected = grunt.file.read('test/expected/test_relative.css');
+		test.equal(actual, expected, 'should compile SCSS to CSS');
+
+		test.done();
+	},
 	concat: function (test) {
 		test.expect(1);
 
