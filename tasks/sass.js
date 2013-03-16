@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         grunt.file.write(dest, css);
         helpers.minMaxInfo(css, max);
         cb2();
-      }, { include_paths: includePaths } );
+      }, { includePaths: includePaths } );
     }, function (err) {
       console.log(err)
       cb(!err);
